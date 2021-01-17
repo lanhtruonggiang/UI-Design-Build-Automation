@@ -1,0 +1,75 @@
+{
+    "mockup": {
+        "controls": {
+            "control": [
+                {
+                    "ID": "0",
+                    "typeID": "BrowserWindow",
+                    "zOrder": "0",
+                    "w": "727",
+                    "h": "480",
+                    "measuredW": "450",
+                    "measuredH": "400",
+                    "x": "75",
+                    "y": "51"
+                },
+                {
+                    "ID": "1",
+                    "typeID": "Button",
+                    "zOrder": "1",
+                    "w": "194",
+                    "h": "55",
+                    "measuredW": "63",
+                    "measuredH": "27",
+                    "x": "912",
+                    "y": "121"
+                },
+                {
+                    "ID": "2",
+                    "typeID": "Alert",
+                    "zOrder": "2",
+                    "w": "320",
+                    "h": "180",
+                    "measuredW": "200",
+                    "measuredH": "102",
+                    "x": "849",
+                    "y": "225"
+                },
+                {
+                    "ID": "3",
+                    "typeID": "BlockOfText",
+                    "zOrder": "3",
+                    "w": "364",
+                    "h": "111",
+                    "measuredW": "275",
+                    "measuredH": "80",
+                    "x": "821",
+                    "y": "440"
+                },
+                {
+                    "ID": "4",
+                    "typeID": "Calendar",
+                    "zOrder": "4",
+                    "w": "253",
+                    "h": "206",
+                    "measuredW": "96",
+                    "measuredH": "96",
+                    "x": "1222",
+                    "y": "102"
+                }
+            ]
+        },
+        "attributes": {
+            "name": "New Wireframe 6",
+            "order": 1000011.4238712582,
+            "parentID": null
+        },
+        "branchID": "Master",
+        "resourceID": "40C3D523-088B-4F6E-A08C-E4744551548C",
+        "mockupH": "500",
+        "mockupW": "1400",
+        "measuredW": "1475",
+        "measuredH": "551",
+        "version": "1.0"
+    }
+}

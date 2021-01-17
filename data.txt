@@ -1,0 +1,5 @@
+#text  ID 0 #text  h 480 #text  measuredH 400 #text  measuredW 450 #text  typeID BrowserWindow #text  w 727 #text  x 75 #text  y 51 #text  zOrder 0 #text  
+#text  ID 1 #text  h 55 #text  measuredH 27 #text  measuredW 63 #text  typeID Button #text  w 194 #text  x 912 #text  y 121 #text  zOrder 1 #text  
+#text  ID 2 #text  h 180 #text  measuredH 102 #text  measuredW 200 #text  typeID Alert #text  w 320 #text  x 849 #text  y 225 #text  zOrder 2 #text  
+#text  ID 3 #text  h 111 #text  measuredH 80 #text  measuredW 275 #text  typeID BlockOfText #text  w 364 #text  x 821 #text  y 440 #text  zOrder 3 #text  
+#text  ID 4 #text  h 206 #text  measuredH 96 #text  measuredW 96 #text  typeID Calendar #text  w 253 #text  x 1222 #text  y 102 #text  zOrder 4 #text  

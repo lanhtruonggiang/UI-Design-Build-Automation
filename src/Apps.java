@@ -58,7 +58,28 @@ public class Apps {
 		}
 
 		fw.close();
-		
+
+		Scanner scan = new Scanner(new File("data.txt"));
+
+		while (scan.hasNext()) {
+			String token = scan.next();
+			if (token.equals("#text")) {
+				continue;
+			}
+			if (token.equals("ID")) {
+				Map<String, String> map = new HashMap<String, String>();
+				map.put(token, scan.next());
+				scan.next();
+				for (int i = 0; i < 8; i++) {
+					map.put(scan.next(), scan.next());
+					scan.next();
+				}
+				listElement.add(map);
+			}
+
+		}
+
+		scan.close();
 		return listElement;
 	}
 
@@ -73,7 +94,22 @@ public class Apps {
 			listElement = readXMLFile(file);
 		}
 
-		
+		FileWriter writer = new FileWriter("index.html");
+
+		writer.write("<!DOCTYPE html>\r\n" + "<html>\r\n" + "<body>\r\n" + "\r\n"
+				+ "<canvas id=\"myCanvas\" width=\"1920\" height=\"1080\" style=\"border:1px solid #d3d3d3;\">\r\n"
+				+ "Your browser does not support the HTML5 canvas tag.</canvas>\r\n" + "\r\n" + "<script>\r\n"
+				+ "var c = document.getElementById(\"myCanvas\");\r\n" + "var ctx = c.getContext(\"2d\");\r\n"
+				+ "ctx.beginPath();\r\n");
+		for (int i = 0; i < listElement.size(); i++) {
+			String sw = (String) listElement.get(i).get("w");
+			String sh = (String) listElement.get(i).get("h");
+			String sx = (String) listElement.get(i).get("x");
+			String sy = (String) listElement.get(i).get("y");
+			writer.write(String.format("ctx.rect(%s, %s, %s, %s);\r\n" + "ctx.stroke();\r\n", sx, sy, sw, sh));
+		}
+		writer.write("</script> \r\n" + "\r\n" + "</body>\r\n" + "</html>");
+		writer.close();
 
 	}
 

@@ -51,15 +51,35 @@ public class Apps {
 			NodeList elementNode = element.getChildNodes();
 
 			for (int j = 0; j < elementNode.getLength(); j++) {
-				fw.write(elementNode.item(j).getNodeName() + " " + elementNode.item(j).getTextContent().trim() + " ");
+				fw.write(elementNode.item(j).getNodeName() + " " + elementNode.item(j).getTextContent().stripTrailing()
+						+ " ");
 			}
 			fw.write("\n");
 		}
-		
-		
 
 		fw.close();
-		
+
+		Scanner scan = new Scanner(new File("data.txt"));
+
+		while (scan.hasNext()) {
+			String token = scan.next();
+			if (token.equals("#text")) {
+				continue;
+			}
+			if (token.equals("ID")) {
+				Map<String, String> map = new HashMap<String, String>();
+				map.put(token, scan.next());
+				scan.next();
+				for (int i = 0; i < 8; i++) {
+					map.put(scan.next(), scan.next());
+					scan.next();
+				}
+				listElement.add(map);
+			}
+
+		}
+
+		scan.close();
 		return listElement;
 	}
 

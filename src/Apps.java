@@ -27,8 +27,9 @@ public class Apps {
 		return name.substring(lastIndexOf);
 	}
 
-	private static ArrayList readXMLFile(File file) throws SAXException, IOException, ParserConfigurationException {
-		ArrayList<Map> listElement = new ArrayList<Map>();
+	private static ArrayList<Map<String, String>> readXMLFile(File file)
+			throws SAXException, IOException, ParserConfigurationException {
+		ArrayList<Map<String, String>> listElement = new ArrayList<>();
 		DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
 		DocumentBuilder db = dbf.newDocumentBuilder();
 		Document doc = db.parse(file);
@@ -83,12 +84,12 @@ public class Apps {
 		return listElement;
 	}
 
-	public static void main(String[] args) throws IOException, SAXException, ParserConfigurationException{
+	public static void main(String[] args) throws IOException, SAXException, ParserConfigurationException {
 
 		String pathname = "DemoWireframe.xml"; // path of file
 		File file = new File(pathname);
 
-		ArrayList<Map> listElement = new ArrayList<>();
+		ArrayList<Map<String, String>> listElement = new ArrayList<>();
 
 		if (getFileExtension(file).equals(".xml")) {
 			listElement = readXMLFile(file);
